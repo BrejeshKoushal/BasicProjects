@@ -16,4 +16,4 @@ buttons.forEach((button) => {
             }
         });
     });
-});
+})
