@@ -38,11 +38,13 @@ function validateGuess(guess) {
         checkGuess(guess);
     }
 }
+let won = false;
 
 function checkGuess(guess) {
     if (guess === randomNumber) {
         displayMessage(`You guessed it right`);
         winSound.play();
+        won = true;
         endGame();
     } else if (guess < randomNumber) {
         displayMessage(`Number is too low`);
@@ -71,7 +73,10 @@ function endGame() {
     p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
     startOver.appendChild(p);
     playGame = false;
+    if(won!=true){
     lostSound.play();
+    }
+    won = false;
     newGame();
 }
 
