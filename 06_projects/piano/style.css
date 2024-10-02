@@ -1,0 +1,59 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #ffcccc;
+    font-size: 40px;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    text-align: center;
+}
+
+.piano-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.piano {
+    position: relative;
+    height: 220px;
+    display: flex;
+}
+
+.white-key {
+    flex: 1;
+    background: white;
+    border-left: 1px solid #000;
+    position: relative;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+.white-key:last-child {
+    border-right: 1px solid #000;
+}
+
+.white-key span {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #333;
+}
+
+/* Click animation */
+.clicked {
+    background-color: #ffcccc;
+    transform: scale(0.95);
+}
