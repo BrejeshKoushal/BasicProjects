@@ -91,3 +91,30 @@ button:hover {
     position: relative;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+@media (max-width: 600px) {
+    body {
+        margin: 20px; /* Reduce margin on mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .box {
+        width: 90%; /* Make the box width responsive */
+        height: auto; /* Allow height to adjust automatically */
+        padding: 20px; /* Add some padding */
+    }
+
+    .guessField {
+        width: 80%; /* Make the input field width responsive */
+        margin: 10px auto; /* Center the field */
+    }
+
+    button {
+        width: 80%; /* Make buttons responsive */
+        height: 50px; /* Keep the height consistent */
+        margin: 10px auto; /* Center buttons */
+    }
+
+    p, .LowOrHigh, .guesses, .lastResult {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
