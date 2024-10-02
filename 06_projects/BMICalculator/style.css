@@ -7,11 +7,13 @@ body {
 .container {
     margin-left: 35%;
     margin-top: 10%;
-    width: 400px;
+    width: 370px;
     height: 300px;
     background-color: black;
     padding-left: 80px;
     padding-top: 10px;
+    position: relative; /* Needed for the text positioning */
+    overflow: hidden; /* Prevents text from going outside */
 }
 
 button {
@@ -40,12 +42,37 @@ button:hover {
     margin-top: 10px;
     margin-left: 14px;
 }
+
 #results {
     font-size: 22px;
     text-align: center;
-    margin-top: 20px;
-    color: #F1F1F1;
+    margin-top: 10px;
+    color: bisque;
     margin-right: 115px;
+}
+
+/* Multiple texts moving in a line */
+#kya-hai {
+    color: aqua;
+    font-size: smaller;
+    margin-top: 10px;
+    position: absolute;
+    white-space: nowrap;
+    display: flex; /* To align texts in a row */
+    animation: moveText 10s linear infinite;
+}
+
+#kya-hai div {
+    margin-right: 30px; /* Space between texts */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start completely outside the left side */
+    }
+    100% {
+        transform: translateX(100%); /* Move to the far right */
+    }
 }
 
 /* Media query for mobile devices */
