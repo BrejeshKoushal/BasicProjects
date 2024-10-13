@@ -24,8 +24,8 @@ h1 {
 
 .piano {
     position: relative;
-    height: 220px;
-    display: flex;
+        height: 220px;
+        display: flex;
 }
 
 .white-key {

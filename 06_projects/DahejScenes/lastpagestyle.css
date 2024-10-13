@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Cheri';
+    src: url('fonts/CHERI___.TTF') format('truetype');
+    }
+body{
+    background-color: black;
+    color: #85BB65;
+    font-family: 'Cheri';
+}
+
+
+body, html {
+    font-family: 'Cheri';
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;    
+}
+.container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.word-line {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: moveLeft 40s linear infinite;
+}
+.word {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    color:#85BB65 ;
+    border-radius: 5px;
+    font-size: 24px;
+}   
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

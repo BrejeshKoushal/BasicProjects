@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinitely Moving 'Priceless' Words</title>
+    <link rel="stylesheet" href="lastpagestyle.css">
+</head>
+<body>
+    <div class="container" id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        const words = Array(20).fill('priceless');
+        const lineCount = 10;
+
+        for (let i = 0; i < lineCount; i++) {
+            const line = document.createElement('div');
+            line.className = 'word-line';
+            line.style.top = `${i * 10}%`;
+            line.style.animationDelay = `${-Math.random() * 50}s`;
+
+            words.forEach(word => {
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'word';
+                wordSpan.textContent = word;
+                line.appendChild(wordSpan);
+            });
+
+            container.appendChild(line);
+        }
+    </script>
+</body>
+</html>
