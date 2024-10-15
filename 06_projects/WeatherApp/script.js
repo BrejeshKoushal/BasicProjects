@@ -9,6 +9,8 @@ const autocompleteContainer = document.querySelector('.autocomplete-suggestions'
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     const data = await response.json();
+    console.log(data);
+    
     
     if (response.status === 404) {
         document.querySelector('.error').style.display = 'block';
@@ -30,6 +32,9 @@ async function checkWeather(city) {
             case 'Rain':
                 weatherIcon.src = "images/storm.png";
                 break;
+                case 'Haze':
+                    weatherIcon.src = "images/haze.png";
+                    break;
             case 'Mist':
                 weatherIcon.src = "images/mist.png";
                 break;
